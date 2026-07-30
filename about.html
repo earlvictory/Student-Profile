@@ -1,0 +1,322 @@
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>My Student Profile</title>
+      <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        html,
+        body {
+          width: 100%;
+          min-height: 100vh;
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: whitesmoke;
+          color: darkblue;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px 0;
+          overflow: hidden;
+        }
+
+        main {
+          width: 900px; 
+          max-width: 95%;
+          background-color: white;
+          border: 1px solid lightgray;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+          display: flex;
+          flex-direction: column;
+          border-radius: 4px;
+          overflow: hidden;
+          margin: auto; 
+        }
+
+        header {
+          position: relative;
+          text-align: center;
+          padding: 25px 20px;
+        }
+
+        .logo {
+          position: absolute;
+          left: 40px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 85px;
+          height: 85px;
+          object-fit: contain;
+        }
+
+        header h1 {
+          font-family: "Georgia", serif;
+          font-size: 2.5rem;
+          color: #002b5b;
+          margin-bottom: 5px;
+        }
+
+        header p {
+          font-style: italic;
+          color: dimgray;
+          font-size: 1.15rem;
+        }
+
+        nav {
+          background-color: #002b5b;
+          text-align: center;
+          padding: 12px 0;
+          width: 100%;
+        }
+
+        nav a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 1.05rem;
+          margin: 0 15px;
+        }
+
+        nav span.separator {
+          color: white;
+        }
+
+        section.content-container {
+          display: flex;
+          padding: 20px 40px;
+          gap: 10px;
+          flex: 1;
+        }
+
+        article {
+          flex: 1;
+          position: relative;
+        }
+
+        article:not(:last-child) {
+          border-right: 1px solid lightgray;
+          padding-right: 15px;
+        }
+
+        article h2 {
+          font-size: 1.25rem;
+          color: #002b5b;
+          margin-bottom: 15px;
+        }
+
+        ul,
+        ol {
+          padding-left: 20px;
+          font-size: 1rem;
+          line-height: 1.7;
+        }
+
+        li {
+          margin-bottom: 8px;
+        }
+
+        .info-table {
+          width: 100%;
+          border-collapse: collapse;
+          font-size: 1rem;
+          line-height: 1.7;
+        }
+
+        .info-table td {
+          vertical-align: top;
+          padding-bottom: 6px;
+        }
+
+        .info-table td.label {
+          font-weight: bold;
+          white-space: nowrap;
+          width: 65px;
+        }
+
+        .info-table td.colon {
+          width: 15px;
+          text-align: center;
+        }
+
+        footer {
+          background-color: #002b5b;
+          color: white;
+          text-align: center;
+          padding: 15px;
+          font-size: 0.95rem;
+          width: 100%;
+        }
+
+        .image-row {
+          display: flex;
+          padding: 10px;
+          width: 100%;
+          justify-content: center;
+        }
+
+        .row-img {
+          height: 180px;
+          object-fit: contain;
+          border-radius: 8px;
+          background-color: #f0f0f0;
+        }
+        
+        @media (max-width: 600px) {
+          body {
+            padding: 10px 0;
+          }
+
+          main {
+            width: 98%;
+          }
+
+          header {
+            padding: 15px 10px;
+          }
+
+          .logo {
+            width: 45px;
+            height: 45px;
+            left: 10px;
+          }
+
+          header h1 {
+            font-size: 1.3rem;
+          }
+
+          header p {
+            font-size: 0.8rem;
+          }
+
+          nav {
+            padding: 8px 0;
+          }
+
+          nav a {
+            margin: 0 6px;
+            font-size: 0.8rem;
+          }
+
+          section.content-container {
+            padding: 15px 8px;
+            gap: 6px;
+          }
+
+          article:not(:last-child) {
+            padding-right: 6px;
+          }
+
+          article h2 {
+            font-size: 0.82rem;
+            margin-bottom: 8px;
+          }
+
+          ul,
+          ol {
+            padding-left: 12px;
+            font-size: 0.7rem;
+          }
+
+          .info-table {
+            font-size: 0.7rem;
+          }
+
+          .info-table td.label {
+            width: 45px;
+          }
+
+          .info-table td.colon {
+            width: 8px;
+          }
+
+          .row-img {
+            height: 120px;
+          }
+
+          footer {
+            font-size: 0.7rem;
+            padding: 10px;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <main>
+        <header>
+          <img src="Smc.jpg" alt="School Logo" class="logo" />
+          <h1>About Me</h1>
+          <p>Get to know more about me!</p>
+        </header>
+
+        <nav>
+          <a href="index.html">Home</a>
+          <span class="separator">|</span>
+          <a href="about.html">About</a>
+          <span class="separator">|</span>
+          <a href="gallery.html">Gallery</a>
+        </nav>
+
+        <section class="content-container">
+          <article>
+            <h2>My Skills</h2>
+            <ul>
+              <li>Front-End Web Development</li>
+              <li>Web Design &amp; Layout</li>
+              <li>Web Development</li>
+            </ul>
+          </article>
+
+          <article>
+            <h2>My Favorate Things</h2>
+            <ol>
+              <li>Playing Moba Games</li>
+              <li>Playing Guitar</li>
+              <li>Coding</li>
+            </ol>
+          </article>
+
+          <article>
+            <h2>My Details</h2>
+            <table class="info-table">
+              <tr>
+                <td class="label">Birthday</td>
+                <td class="colon">:</td>
+                <td>March 1</td>
+              </tr>
+              <tr>
+                <td class="label">Address</td>
+                <td class="colon">:</td>
+                <td>Lopoc, Labason , ZDN</td>
+              </tr>
+              <tr>
+                <td class="label">Course</td>
+                <td class="colon">:</td>
+                <td>BSIT 1</td>
+              </tr>
+              <tr>
+                <td class="label">Year</td>
+                <td class="colon">:</td>
+                <td>1st Year</td>
+              </tr>
+              <tr>
+                <td class="label">Section</td>
+                <td class="colon">:</td>
+                <td>BSIT-1A</td>
+              </tr>
+            </table>
+          </article>
+        </section>
+
+        <div class="image-row">
+          <img src="about.jpg" alt="Photo 1" class="row-img" />
+        </div>
+
+        <footer>&copy; 2026 Earl Victory I. Rodriguez | BSIT-1A</footer>
+      </main>
+    </body>
+  </html>
